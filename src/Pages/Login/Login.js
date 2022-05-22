@@ -42,8 +42,8 @@ const Login = () => {
     }
 
     return (
-        <div style={{ backgroundImage: `url(${bg})` }}>
-            <div className='flex h-screen justify-center items-center '>
+        <div  style={{ backgroundImage: `url(${bg})` }}>
+            <div className='flex h-screen justify-center items-center'>
                 <div className="card w-96 bg-base-100 shadow-xl border-2 border-primary-focus">
                     <div className="card-body">
                         <h2 className="text-center text-2xl font-bold text-primary">Login</h2>
