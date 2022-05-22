@@ -26,11 +26,12 @@ const Banner = () => {
                 </div>
             </div>
             <div className="flex justify-center w-full py-2 gap-2">
-                <a href="#item1" className="btn btn-xs btn-primary">1</a>
-                <a href="#item2" className="btn btn-xs btn-primary">2</a>
-                <a href="#item3" className="btn btn-xs btn-primary">3</a>
-                <a href="#item4" className="btn btn-xs btn-primary">4</a>
-                <a href="#item5" className="btn btn-xs btn-primary">5</a>
+                <a href="#item1" className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-8  h-8 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">1</a>
+
+                <a href="#item2" className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-8  h-8 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">2</a>
+                <a href="#item3" className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-8  h-8 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">3</a>
+                <a href="#item4" className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-8  h-8 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">4</a>
+                <a href="#item5" className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-8  h-8 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">5</a>
             </div>
         </div>
     );

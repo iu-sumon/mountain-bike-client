@@ -41,7 +41,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="avatar">
-                        <div className="w-24 rounded-xl">
+                        <div className="w-20 rounded-xl">
                             <img src={logo} alt="" />
                         </div>
                     </div>
