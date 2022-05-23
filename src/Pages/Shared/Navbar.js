@@ -14,9 +14,10 @@ const Navbar = () => {
 
         <li className='font-semibold mr-3'><Link to='/'>Home</Link></li>
         <li className='font-semibold mr-3'><Link to='/all-parts'>Parts</Link></li>
+        <li className='font-semibold mr-3'><Link to='/dashboard'>Dashboard</Link></li>
+        <li className='font-semibold mr-3'><Link to='/portfolio'>Portfolio</Link></li>
         <li className='font-semibold mr-3'><Link to='/blogs'>Blogs</Link></li>
-        <li className='font-semibold mr-3'><Link to='/about'>About</Link></li>
-        <li className='font-semibold mr-3'><Link to='/contact'>Contact</Link></li>
+        
         {
             user ? <li onClick={logout} className='font-semibold mr-3'><Link to='/login'>SingOut</Link></li>
                 :

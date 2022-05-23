@@ -8,7 +8,7 @@ const Blogs = () => {
                     <p className='text-xl font-semibold text-black'>How will you improve the performance of a React Application?</p>
                     <div>
                         <p>In React applications, we are guaranteed a very fast UI by default. However, as an application grows, developers may encounter some performance issues.In this guide, we will discuss five important ways to optimize the performance of a React application, including pre-optimization techniques.</p>
-                        <p>These include:</p>
+                        <p className='text-black font-semibold'>These include:</p>
                         <ul className='list-disc pl-5'>
                             <li>Keeping component state local where necessary</li>
                             <li>Memoizing React components to prevent unnecessary re-renders</li>
@@ -22,13 +22,25 @@ const Blogs = () => {
 
                 <div className='border-2 px-5 pb-3 mb-5 shadow rounded-lg'>
                     <p className='text-xl font-semibold text-black'>What are the different ways to manage a state in a React application?</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus nam quasi modi dolorem et omnis. Pariatur, ratione laudantium enim sequi aperiam dolorum odio, sunt voluptatum, doloremque quae eligendi hic eius commodi. Expedita nam dolorum alias voluptatem voluptate quis sint vero enim veritatis ratione, labore cupiditate facilis qui ea totam nesciunt ipsa quam doloribus deleniti! Distinctio aut ex inventore sed excepturi totam a sapiente dignissimos, culpa nostrum molestias rerum quis tempora ipsum voluptatibus tenetur quo ullam hic saepe laborum, eos blanditiis, animi facilis delectus? Rem earum laudantium deleniti tempore tempora natus aspernatur quam atque accusamus laborum. Ullam natus sunt ut dolore!</p>
+                    <p>React components have a built-in state object. The state is encapsulated data where you store assets that are persistent between component renderings.The state is just a fancy term for a JavaScript data structure. If a user changes state by interacting with your application, the UI may look completely different afterwards, because it's represented by this new state rather than the old state.</p>
+                    <p className='text-black font-semibold'>There are four main types of state we need to properly manage in your React apps:</p>
+                    <ul className='list-decimal pl-5'>
+                        <li>Local State</li>
+                        <p>Local state is most often managed in React using the useState hook.</p>
+                        <li>Global State</li>
+                        <p>Global state is data we manage across multiple components.</p>
+                        <li>Server State</li>
+                        <p>Server state is a simple concept, but can be hard to manage alongside all of our local and global UI state.</p>
+                        <li>URL State</li>
+                        <p>URL state is often missing as a category of state, but it is an important one.
+                            In many cases, a lot of major parts of our application rely upon accessing URL state.</p>
+                    </ul>
 
                 </div>
 
                 <div className='border-2 px-5 pb-3 mb-5 shadow rounded-lg'>
                     <p className='text-xl font-semibold text-black'>How does prototypical inheritance work?</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus nam quasi modi dolorem et omnis. Pariatur, ratione laudantium enim sequi aperiam dolorum odio, sunt voluptatum, doloremque quae eligendi hic eius commodi. Expedita nam dolorum alias voluptatem voluptate quis sint vero enim veritatis ratione, labore cupiditate facilis qui ea totam nesciunt ipsa quam doloribus deleniti! Distinctio aut ex inventore sed excepturi totam a sapiente dignissimos, culpa nostrum molestias rerum quis tempora ipsum voluptatibus tenetur quo ullam hic saepe laborum, eos blanditiis, animi facilis delectus? Rem earum laudantium deleniti tempore tempora natus aspernatur quam atque accusamus laborum. Ullam natus sunt ut dolore!</p>
+                     <p>Every object with its methods and properties contains an internal and hidden property known as [[Prototype]]. The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object. Traditionally, in order to get and set the [[Prototype]] of an object, we use Object.getPrototypeOf and Object.</p>
 
                 </div>
 
