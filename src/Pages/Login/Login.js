@@ -12,7 +12,7 @@ const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [signInWithFacebook, fUser, fLoading, fError] = useSignInWithFacebook(auth);
     const [sendPasswordResetEmail, sendingPR] = useSendPasswordResetEmail(auth);
-    const { register, formState: { errors }, handleSubmit ,getValues } = useForm();
+    const { register, formState: { errors }, handleSubmit, getValues } = useForm();
     const [
         signInWithEmailAndPassword,
         user,
@@ -29,7 +29,7 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
-    if (loading || gLoading || fLoading ||sendingPR) {
+    if (loading || gLoading || fLoading || sendingPR) {
         return <Loading></Loading>
     }
 
@@ -39,10 +39,11 @@ const Login = () => {
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
+        toast('Login Successfully')
     }
 
     return (
-        <div  style={{ backgroundImage: `url(${bg})` }}>
+        <div style={{ backgroundImage: `url(${bg})` }}>
             <div className='flex h-screen justify-center items-center'>
                 <div className="card w-96 bg-base-100 shadow-xl border-2 border-primary-focus">
                     <div className="card-body">
@@ -115,7 +116,14 @@ const Login = () => {
                                 <img onClick={() => signInWithGoogle()} className='w-7 h-7 cursor-pointer' src={google} alt="" />
                             </div>
                             <div>
-                                <img onClick={() => signInWithFacebook()} className='w-8 h-8 cursor-pointer' src={faceBook} alt="" />
+                                <img
+                                    onClick={() => {
+
+                                        signInWithFacebook()
+                                        toast('Login Successfully')
+                                    }
+                                    }
+                                    className='w-8 h-8 cursor-pointer' src={faceBook} alt="" />
                             </div>
                         </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import b1 from '../../Assets/others/wetgu.PNG'
 const Blogs = () => {
     return (
         <div className='bg-[#0183B5] py-10 text-white'>
@@ -40,13 +40,17 @@ const Blogs = () => {
 
                 <div className='border-2 px-5 pb-3 mb-5 shadow rounded-lg'>
                     <p className='text-xl font-semibold text-black'>How does prototypical inheritance work?</p>
-                     <p>Every object with its methods and properties contains an internal and hidden property known as [[Prototype]]. The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object. Traditionally, in order to get and set the [[Prototype]] of an object, we use Object.getPrototypeOf and Object.</p>
-
+                    <p>Every object with its methods and properties contains an internal and hidden property known as [[Prototype]]. The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object. Traditionally, in order to get and set the [[Prototype]] of an object, we use Object.getPrototypeOf and Object.</p>
+                    <img className='w-[400px] rounded-lg mt-5' src={b1} alt="" />
                 </div>
 
                 <div className='border-2 px-5 pb-3 mb-5 shadow rounded-lg'>
+
                     <p className='text-xl font-semibold text-black'>What is a unit test? Why should write unit tests?</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus nam quasi modi dolorem et omnis. Pariatur, ratione laudantium enim sequi aperiam dolorum odio, sunt voluptatum, doloremque quae eligendi hic eius commodi. Expedita nam dolorum alias voluptatem voluptate quis sint vero enim veritatis ratione, labore cupiditate facilis qui ea totam nesciunt ipsa quam doloribus deleniti! Distinctio aut ex inventore sed excepturi totam a sapiente dignissimos, culpa nostrum molestias rerum quis tempora ipsum voluptatibus tenetur quo ullam hic saepe laborum, eos blanditiis, animi facilis delectus? Rem earum laudantium deleniti tempore tempora natus aspernatur quam atque accusamus laborum. Ullam natus sunt ut dolore!</p>
+                    <p className='text-xl font-semibold text-black'>What is a unit test?</p>
+                    <p>unit testing is a method of testing the smallest pieces of code, typically individual functions, in isolation. These small pieces of code are called units. A unit can be a line of code, a class, or a method.</p>
+                    <p className='text-xl font-semibold text-black'>Why should write unit tests?</p>
+                    <p>Unit testing ensures that all code meets quality standards before it's deployed. This ensures a reliable engineering environment where quality is paramount. Over the course of the product development life cycle, unit testing saves time and money, and helps developers write better code, more efficiently.</p>
 
                 </div>
 

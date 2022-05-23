@@ -2,13 +2,17 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import logo from '../../Assets/logo/logo-1.jpg'
+import userPhoto from '../../Assets/usericon/icons8-user-100.png'
 import auth from '../../firebase.init';
 
 const Navbar = () => {
     const [user] = useAuthState(auth)
+    console.log(user);
     const logout = () => {
         signOut(auth);
+        toast('SignOut Successfully')
     };
     const menuItems = <>
 
@@ -17,12 +21,6 @@ const Navbar = () => {
         <li className='font-semibold mr-3'><Link to='/dashboard'>Dashboard</Link></li>
         <li className='font-semibold mr-3'><Link to='/portfolio'>Portfolio</Link></li>
         <li className='font-semibold mr-3'><Link to='/blogs'>Blogs</Link></li>
-        
-        {
-            user ? <li onClick={logout} className='font-semibold mr-3'><Link to='/login'>SingOut</Link></li>
-                :
-                <li className='font-semibold mr-3'><Link to='/login'>Login</Link></li>
-        }
     </>
 
 
@@ -57,7 +55,30 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='navbar-end'>
-                    <Link to='/' className="btn btn-primary">Get started</Link>
+                    <div className="dropdown dropdown-hover dropdown-end">
+
+                        <label tabIndex="0">
+
+                            <div className="avatar">
+
+                                <div className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-16  h-16 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">
+                                    <img src={user?.photoURL ? user?.photoURL : userPhoto} alt={user?.displayName} />
+                                </div>
+
+                            </div>
+
+                        </label>
+
+                        <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-lg w-52 h-52">
+                            <p className='text-center mb-5 font-bold'>{user?.displayName}</p>
+                            {
+                                user ? <p className='text-center btn rounded-full'onClick={logout}><Link to='/login'>SignOut</Link></p>
+                                    :
+                                    <p className='text-center btn rounded-full'><Link to='/login'>Login</Link></p>
+
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

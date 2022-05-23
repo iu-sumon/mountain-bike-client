@@ -2,16 +2,16 @@ import React from 'react';
 
 const HomePartsCard = ({ part }) => {
 
-    const { name, img, price, ordered_quantity, description,available } = part;
+    const { name, img, price, ordered_quantity, description, available } = part;
     return (
         <div>
             <div>
-                <div class="card shadow border ">
-                    <figure class="px-10 pt-10">
-                        <img src={img} alt="" class="rounded-xl shadow " />
+                <div className="card shadow border ">
+                    <figure className="px-10 pt-10">
+                        <img src={img} alt="" className="rounded-xl shadow " />
                     </figure>
-                    <div class="card-body text-center">
-                        <h2 class="text-xl font-semibold text-center uppercase">{name}</h2>
+                    <div className="card-body text-center">
+                        <h2 className="text-xl font-semibold text-center uppercase">{name}</h2>
                         <p className='text-justify'>{description.slice(0, 100)}</p>
                         <div className='flex justify-between items-center text-[18px] font-bold'>
                             <small>Price</small>
@@ -26,8 +26,8 @@ const HomePartsCard = ({ part }) => {
                             <small>{available}</small>
                         </div>
 
-                        <div class="card-actions mt-3 mx-auto">
-                            <button class="btn bg-blue-900 rounded-full px-10">Buy Now</button>
+                        <div className="card-actions mt-3 mx-auto">
+                            <button className="btn bg-blue-900 rounded-full px-10">Buy Now</button>
                         </div>
                     </div>
                 </div>
