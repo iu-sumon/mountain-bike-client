@@ -4,13 +4,13 @@ const Brand = ({ brand }) => {
     const { name, img } = brand;
     return (
         <div>
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure class="px-10 pt-10">
+            <div class="card bg-base-100 shadow border border-primary font-serif">
+                <div class="p-2">
                     <img src={img} alt="Shoes" class="rounded-xl" />
-                </figure>
+                </div>
                 <div class="card-body items-center text-center">
 
-                    <h2 class="card-title">{name}</h2>
+                    <h2 class="card-title uppercase">{name}</h2>
                    
                 </div>
             </div>

@@ -4,7 +4,7 @@
         "name":"Bearings",
         "img":"https://i.ibb.co/6bg1Hn9/Bearings.jpg",
         "price":"$5",
-        "ordered quantity":"300",
+        "ordered_quantity":"300",
         "available":"2000",
         "description":"Bicycle bearings commonly use bearing balls, placed in a cone, compressed with a cup (cup and cone bearing). Cup, with curved walls holds the balls, while the cone presses on top, holding them in place. Cup and cone bearing. Cone is screwed onto the axle and presses the balls onto the cup."
          
@@ -14,7 +14,7 @@
         "name":"Brackets",
         "img":"https://i.ibb.co/QKkc7dy/bottom-brackets.jpg",
         "price":"$50",
-        "ordered quantity":"300",
+        "ordered_quantity":"300",
         "available":"3000",
         "description":"The bottom bracket on a bicycle connects the crankset (chainset) to the bicycle and allows the crankset to rotate freely. It contains a spindle to which the crankset attaches, and the bearings that allow the spindle and crankset to rotate. The chainrings and pedals attach to the cranks."
          
@@ -25,7 +25,7 @@
         "name":"Brakes",
         "img":"https://i.ibb.co/2hgsfm9/brakes.jpg",
         "price":"$5",
-        "ordered quantity":"200",
+        "ordered_quantity":"200",
         "available":"2000",
         "description":"a cyclist pulls a mechanical bike brake, the lever pulls a cable which causes the calliper to be pulled and tightened. Once tightened, the callipers braking pads apply friction to the braking surface helping to slow the bike or bring it to a stop "
       },
@@ -34,7 +34,7 @@
         "name":"Cables",
         "img":"https://i.ibb.co/WWx7m2g/cables.jpg",
         "price":"$5",
-        "ordered quantity":"3000",
+        "ordered_quantity":"3000",
         "available":"5000",
         "description":"Brake and gear cables are a form of Bowden cable. They comprise an inner cable made of twisted steel wire that runs through an outer sleeve from your bike's control levers on the bar to the brakes or derailleurs"
          
@@ -44,7 +44,7 @@
         "name":"Chain Ring Bolt",
         "img":"https://i.ibb.co/6y1m6xW/Chain-ring-bolt.jpg",
         "price":"$300",
-        "ordered quantity":"560",
+        "ordered_quantity":"560",
         "available":"1570",
         "description":"Chainring bolts are typically made of steel, aluminium or titanium.  Aluminium bolts may be lighter but have more potential for breakage, while titanium bolts offer the best balance between light weight and strength, but at a hefty price."
          
@@ -54,7 +54,7 @@
         "name":"Driven Train",
         "img":"https://i.ibb.co/6PGc9RP/driven-Train.jpg",
         "price":"$80",
-        "ordered quantity":"505",
+        "ordered_quantity":"505",
         "available":"8000",
         "description":"The 'drivetrain' of the bike consists of all the bits that you use to push (or pull) the bike along. The key components are the pedals, cranks, chainrings, chain, cogs (cassette) and derailleur."
          
@@ -64,7 +64,7 @@
         "name":"Hubs",
         "img":"https://i.ibb.co/TLL44v6/Hubs.jpg",
         "price":"$90",
-        "ordered quantity":"1550",
+        "ordered_quantity":"1550",
         "available":"2750",
         "description":"The hub is the central part of your bike's wheels (front and rear), which connects to the wheel's rim via the spokes and through which the axle is fitted, enabling the wheel to freely spin on two sets of bearings. Our best bike hubs buying guide is the place to find out more!"
          
@@ -74,7 +74,7 @@
         "name":"Pedals",
         "img":"https://i.ibb.co/fphyCn9/pedals.jpg",
         "price":"$30",
-        "ordered quantity":"500",
+        "ordered_quantity":"500",
         "available":"1020",
         "description":"The pedal is the part of a bicycle that the rider pushes with their foot to propel the vehicle. It provides the connection between the cyclist's foot or shoe and the crank allowing the leg to turn the bottom bracket spindle and propel the bicycle's wheels"
          
@@ -84,7 +84,7 @@
         "name":"Shifters",
         "img":"https://i.ibb.co/9bJh87P/shifters.jpg",
         "price":"$120",
-        "ordered quantity":"700",
+        "ordered_quantity":"700",
         "available":"2340",
         "description":"A bicycle shifter or gear control or gear levers is a component used to control the gearing mechanisms and select the desired gear ratio. Typically, they operate either a derailleur mechanism or an internal hub gear mechanism."
          
@@ -94,7 +94,7 @@
         "name":"Tires",
         "img":"https://i.ibb.co/rMzRFSy/tires.jpg",
         "price":"$5",
-        "ordered quantity":"2240",
+        "ordered_quantity":"2240",
         "available":"6000",
         "description":"Bicycle tires consist of a rubber-impregnated cloth casing, also called the carcass, with additional rubber, called the tread, on the surface that contacts the road. In the case of clinchers, the casing wraps around two beads, one on each edge."
          
@@ -104,7 +104,7 @@
         "name":"Wheels",
         "img":"https://i.ibb.co/gFTM7mM/wheels.jpg",
         "price":"$9",
-        "ordered quantity":"1456",
+        "ordered_quantity":"1456",
         "available":"3243",
         "description":"A bicycle wheel is a wheel, most commonly a wire wheel, designed for a bicycle. A pair is often called a wheelset, especially in the context of ready built off the shelf performance-oriented wheels."
          
@@ -114,7 +114,7 @@
         "name":"Groups",
         "img":"https://i.ibb.co/bB5NtLx/Groupos.jpg",
         "price":"$78",
-        "ordered quantity":"3456",
+        "ordered_quantity":"3456",
         "available":"6343",
         "description":"A bike's groupset is essentially the collection of moving parts on your bike that drive or stop the wheels. Groupsets at a glance: A bike's groupset consists of shifters, chainset, cassette, deraileurs, brakes, bottom bracket, chain, and cables."
          
@@ -124,7 +124,7 @@
         "name":"Forks",
         "img":"https://i.ibb.co/GMv8mdN/forks.jpg",
         "price":"$34",
-        "ordered quantity":"2334",
+        "ordered_quantity":"2334",
         "available":"6378",
         "description":"Bicycle fork is a part of the bicycle on which the front wheel is mounted and which is turned via handlebars in order to steer the bicycle. It consists of steerer tube, crown and fork legs and dropout for receiving wheel axle. It usually has brake mounts as well"
          
@@ -134,7 +134,7 @@
         "name":"Chain",
         "img":"https://i.ibb.co/rMZqZqs/Chain.jpg",
         "price":"$8",
-        "ordered quantity":"2335",
+        "ordered_quantity":"2335",
         "available":"5321",
         "description":"A bicycle chain is a roller chain that transfers power from the pedals to the drive-wheel of a bicycle, thus propelling it. Most bicycle chains are made from plain carbon or alloy steel, but some are nickel-plated to prevent rust, or simply for aesthetics."
          
@@ -144,7 +144,7 @@
         "name":"Shocks",
         "img":"https://i.ibb.co/Wzy1Yy1/rear-shocks.jpg",
         "price":"$30",
-        "ordered quantity":"2335",
+        "ordered_quantity":"2335",
         "available":"4335",
         "description":"Rear suspension is only found on full-suspension mountain bikes, and is commonly referred to as the rear shock, or “shock” for short. The shock allows the rear wheel to soak up impacts, helping to keep the tire in contact with the ground, increasing rider control and decreasing rider fatigue."
          
@@ -154,7 +154,7 @@
         "name":"Frames",
         "img":"https://i.ibb.co/2yfdSGD/frames.jpg",
         "price":"%23",
-        "ordered quantity":"2535",
+        "ordered_quantity":"2535",
         "available":"5350",
         "description":"A bicycle frame is the main component of a bicycle, onto which wheels and other components are fitted. The modern and most common frame design for an upright bicycle is based on the safety bicycle, and consists of two triangles: a main triangle and a paired rear triangle. "
          
