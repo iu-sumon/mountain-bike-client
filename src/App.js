@@ -15,6 +15,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import NotFound from './Pages/NotFound/NotFound';
+import PurchasePage from './Pages/PurchasePage/PurchasePage';
 
 function App() {
   return (
@@ -23,14 +24,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/all-parts" element={<AllParts />} />
-        <Route path="/dashboard" element={<Dashboard/>} />
-        <Route path="/portfolio" element={<Portfolio/>} />
-        <Route path="/blogs" element={<Blogs/>} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/*" element={<NotFound/>} />
+        <Route path="/purchasePage/:id" element={<PurchasePage/>} />
+
+
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

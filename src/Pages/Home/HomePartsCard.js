@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomePartsCard = ({ part }) => {
 
-    const { name, img, price, ordered_quantity, description, available } = part;
+    const {_id, name, img, price, ordered_quantity, description, available } = part;
     return (
         <div>
             <div>
@@ -29,7 +30,7 @@ const HomePartsCard = ({ part }) => {
                         </div>
 
                         <div className="card-actions mt-3 mx-auto">
-                            <button className="btn bg-blue-900 rounded-full px-10">Buy Now</button>
+                            <Link to={`/purchasePage/${_id}`} className="btn bg-blue-900 rounded-full px-10">Buy Now</Link>
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,11 @@ import React from 'react';
 const AllPartsCard = ({ part }) => {
 
     const { name, img, price, ordered_quantity, description, available } = part;
+
+
     return (
+
+        
         <div>
             <div>
                 <div className="card shadow border ">
