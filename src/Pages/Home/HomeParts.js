@@ -1,10 +1,21 @@
 import React from 'react';
 import useParts from '../../hooks/useParts';
 import HomePartsCard from './HomePartsCard';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const HomeParts = () => {
     const [parts] = useParts()
     let getParts=parts.slice(0,6)
+
+//...............................AOS Animation function................................//
+useEffect(() => {
+    AOS.init();
+}, []);
+
+
 
     return (
         <div  className='md:w-[70%] mx-auto my-[80px]'>

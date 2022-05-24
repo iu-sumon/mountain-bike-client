@@ -11,7 +11,7 @@ const WorkingSection = () => {
                     <img src={p1} alt="" />
                 </div>
                 <div>
-                    <h1 className='md:text-6xl text-4xl text-center mb-5'>How we do it</h1>
+                    <h1 className='md:text-5xl text-4xl text-center mb-5 uppercase'>How we do it</h1>
                     <p className='text-xl p-5'>MNFT was established in 2005 and provides bicycle OEM services. We have 13 years of bicycle manufacturing and exporting experience. The factory covers an area of more than 80,000 square meters, has more than 500 employees. Has a number of automatic bicycle welding, spraying, decals, assembly, packaging production line.</p>
                 </div>
             </div>

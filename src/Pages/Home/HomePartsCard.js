@@ -6,7 +6,9 @@ const HomePartsCard = ({ part }) => {
     return (
         <div>
             <div>
-                <div className="card shadow border ">
+                <div 
+                data-aos="zoom-in"
+                className="card shadow border ">
                     <figure className="px-10 pt-10">
                         <img src={img} alt="" className="rounded-xl shadow " />
                     </figure>
