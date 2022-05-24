@@ -4,13 +4,13 @@ const Portfolio = () => {
     return (
         <div>
             <div className='bg-[#0183B5]'>
-                <div class="card">
-                    <figure class="pt-10">
-                        <img src={Photo} alt="Shoes" class="rounded-xl border-2 p-2" />
+                <div className="card">
+                    <figure className="pt-10">
+                        <img src={Photo} alt="Shoes" className="rounded-xl border-2 p-2" />
                     </figure>
-                    <div class="card-body mx-auto">
+                    <div className="card-body mx-auto">
                         <div className='text-center text-white'>
-                            <h2 class="text-2xl font-bold text-black">Md. Sumon Mia</h2>
+                            <h2 className="text-2xl font-bold text-black">Md. Sumon Mia</h2>
                             <p className='text-sm font-semibold '>MERN Stack Web Developer</p>
                             <div className='my-5'>
                                 <h5 className='font-semibold underline text-black'>Address</h5>

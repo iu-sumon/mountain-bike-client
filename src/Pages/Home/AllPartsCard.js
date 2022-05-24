@@ -7,7 +7,7 @@ const AllPartsCard = ({ part }) => {
 
     return (
 
-        
+
         <div>
             <div>
                 <div className="card shadow border ">
@@ -19,7 +19,7 @@ const AllPartsCard = ({ part }) => {
                         <p className='text-justify'>{description.slice(0, 100)}</p>
                         <div className='flex justify-between items-center text-[18px] font-bold'>
                             <small>Price</small>
-                            <small>{price}</small>
+                            <small>${price}</small>
                         </div>
                         <div className='flex justify-between items-center text-[18px] font-bold'>
                             <small>Ordered Quantity</small>

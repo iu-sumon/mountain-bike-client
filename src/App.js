@@ -16,6 +16,10 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import NotFound from './Pages/NotFound/NotFound';
 import PurchasePage from './Pages/PurchasePage/PurchasePage';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import AddReview from './Pages/Dashboard/AddReview';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import DeletingModal from './Pages/Dashboard/DeletingModal';
 
 function App() {
   return (
@@ -24,14 +28,25 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/all-parts" element={<AllParts />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={
+
+          <Dashboard />
+
+        }>
+          <Route index element={<MyOrders/>} />
+          <Route path="review" element={<AddReview/>} />
+          <Route path="profile" element={<MyProfile/>} />
+
+        </Route>
+
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/purchasePage/:id" element={<PurchasePage/>} />
+       
+        <Route path="/purchasePage/:id" element={<PurchasePage />} />
 
 
         <Route path="/*" element={<NotFound />} />

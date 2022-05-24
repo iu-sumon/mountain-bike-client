@@ -10,17 +10,18 @@ const SummaryCard = ({ summary }) => {
     return (
         <div>
             <div>
-                <div class="card shadow-xl border">
+                <div className="card shadow-xl border ">
 
-                    <div class="card-body">
+                    <div className="card-body">
 
                         <div>
                             <img className='w-16 mx-auto bg-white p-2 rounded-lg' src={icon} alt="" />
-                            <p class="text-xl uppercase text-center text-white">{name}</p>
+                            <p className="text-xl uppercase text-center text-white">{name}</p>
                         </div>
 
                         <div>
-                          <p className='text-5xl text-center font-bold text-white'> <CountUp delay={2} end={quantity}  duration={5}/>{summary?.plus}</p>
+                            <p className='text-5xl text-center font-bold text-white'>
+                                <CountUp delay={2} end={quantity} duration={5} />{summary?.plus}</p>
                         </div>
 
                     </div>
