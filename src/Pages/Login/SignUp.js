@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading/Loading';
 import google from '../../Assets/svg/google-icon-logo-svgrepo-com.svg'
 import faceBook from '../../Assets/svg/facebook-svgrepo-com.svg'
+import { toast } from 'react-toastify';
 const SignUp = () => {
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -28,22 +29,22 @@ const SignUp = () => {
         return <Loading></Loading>
     }
 
-    if (error || gError ||fError || updateError) {
-        signInError =<small className='text-red-500'>{error?.message || gError?.message || updateError?.message}</small>
+    if (error || gError || fError || updateError) {
+        signInError = <small className='text-red-500'>{error?.message || gError?.message || updateError?.message}</small>
     }
 
-    if (user || gUser ||fUser) {
-        navigate('/home');
+    if (user || gUser || fUser) {
+        navigate('/');
     }
 
     const onSubmit = async data => {
 
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
-      
+        toast('Signup Successfully')
     }
     return (
-        <div style={{backgroundImage: `url(${bg})`}}>
+        <div  className='bg-cover h-screen' style={{ backgroundImage: `url(${bg})` }}>
             <div className='flex h-screen justify-center items-center'>
                 <div className="card w-96 bg-base-100 shadow-xl border-2 border-primary-focus">
                     <div className="card-body">
@@ -127,10 +128,17 @@ const SignUp = () => {
                         <div className="divider">OR</div>
                         <div className='flex justify-evenly items-center bg-primary p-2 rounded-full shadow-lg'>
                             <div>
-                                <img onClick={() => signInWithGoogle()} className='w-7 h-7 cursor-pointer' src={google} alt="" />
+                                <img onClick={() => {
+                                    signInWithGoogle()
+                                    toast('Signup Successfully')
+                                    
+                                    }} className='w-7 h-7 cursor-pointer' src={google} alt="" />
                             </div>
                             <div>
-                                <img onClick={() => signInWithFacebook()} className='w-8 h-8 cursor-pointer' src={faceBook} alt="" />
+                                <img onClick={() => {
+                                    signInWithFacebook()
+                                    toast('Signup Successfully')
+                                    }} className='w-8 h-8 cursor-pointer' src={faceBook} alt="" />
                             </div>
                         </div>
                     </div>

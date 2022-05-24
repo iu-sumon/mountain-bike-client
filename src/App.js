@@ -14,6 +14,7 @@ import AllParts from './Pages/Home/AllParts';
 import Blogs from './Pages/Blogs/Blogs';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Portfolio from './Pages/Portfolio/Portfolio';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/*" element={<NotFound/>} />
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

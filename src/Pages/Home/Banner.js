@@ -7,22 +7,22 @@ import s5 from '../../Assets/slider/s5.jpeg'
 
 const Banner = () => {
     return (
-        <div className='bg-lime-200'>
+        <div className='bg-lime-200 pt-12'>
             <div className="carousel w-full">
                 <div id="item1" className="carousel-item w-full">
-                    <img src={s2} className="w-[1000px] mx-auto" alt='' />
+                    <img src={s2} className="w-[1000px] mx-auto rounded-xl" alt='' />
                 </div>
                 <div id="item2" className="carousel-item w-full">
-                    <img src={s1} className="w-[1000px] mx-auto" alt='' />
+                    <img src={s1} className="w-[1000px] mx-auto rounded-xl" alt='' />
                 </div>
                 <div id="item3" className="carousel-item w-full">
-                    <img src={s3} className="w-[1000px] mx-auto" alt='' />
+                    <img src={s3} className="w-[1000px] mx-auto rounded-xl" alt='' />
                 </div>
                 <div id="item4" className="carousel-item w-full">
-                    <img src={s4} className="w-[1000px] mx-auto" alt='' />
+                    <img src={s4} className="w-[1000px] mx-auto rounded-xl" alt='' />
                 </div>
                 <div id="item5" className="carousel-item w-full">
-                    <img src={s5} className="w-[1000px] mx-auto" alt='' />
+                    <img src={s5} className="w-[1000px] mx-auto rounded-xl" alt='' />
                 </div>
             </div>
             <div className="flex justify-center w-full py-2 gap-2">

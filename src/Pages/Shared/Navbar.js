@@ -28,7 +28,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-primary px-12">
+            <div className="navbar bg-primary px-5">
 
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -40,8 +40,8 @@ const Navbar = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <div className="avatar">
-                        <div className="w-20 rounded-xl">
+                    <div className="avatar md:block hidden">
+                        <div className="w-16 rounded-xl">
                             <img src={logo} alt="" />
                         </div>
                     </div>
@@ -61,7 +61,8 @@ const Navbar = () => {
 
                             <div className="avatar">
 
-                                <div className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-16  h-16 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">
+                                <div className=" text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-16  h-16 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">
+                                   
                                     <img src={user?.photoURL ? user?.photoURL : userPhoto} alt={user?.displayName} />
                                 </div>
 
@@ -72,7 +73,7 @@ const Navbar = () => {
                         <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-lg w-52 h-52">
                             <p className='text-center mb-5 font-bold'>{user?.displayName}</p>
                             {
-                                user ? <p className='text-center btn rounded-full'onClick={logout}><Link to='/login'>SignOut</Link></p>
+                                user ? <p className='text-center btn rounded-full' onClick={logout}><Link to='/login'>SignOut</Link></p>
                                     :
                                     <p className='text-center btn rounded-full'><Link to='/login'>Login</Link></p>
 

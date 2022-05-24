@@ -43,7 +43,7 @@ const Login = () => {
     }
 
     return (
-        <div style={{ backgroundImage: `url(${bg})` }}>
+        <div className='bg-cover h-screen' style={{ backgroundImage: `url(${bg})` }}>
             <div className='flex h-screen justify-center items-center'>
                 <div className="card w-96 bg-base-100 shadow-xl border-2 border-primary-focus">
                     <div className="card-body">
@@ -113,7 +113,11 @@ const Login = () => {
                         <div className="divider">OR</div>
                         <div className='flex justify-evenly items-center bg-primary p-2 rounded-full shadow-lg'>
                             <div>
-                                <img onClick={() => signInWithGoogle()} className='w-7 h-7 cursor-pointer' src={google} alt="" />
+                                <img onClick={() =>{ 
+                                    signInWithGoogle()
+                                    toast('Login Successfully')
+                                    
+                                    }} className='w-7 h-7 cursor-pointer' src={google} alt="" />
                             </div>
                             <div>
                                 <img

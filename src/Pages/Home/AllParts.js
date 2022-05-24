@@ -4,7 +4,7 @@ import AllPartsCard from './AllPartsCard';
 
 const AllParts = () => {
     const [parts] = useParts()
-
+console.log(parts);
     return (
         <div  className='w-[80%] mx-auto my-[80px]'>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-5'>
