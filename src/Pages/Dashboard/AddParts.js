@@ -1,13 +1,12 @@
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import auth from '../../firebase.init';
+ ;
 
 
 
 const AddParts = () => {
-    const [user] = useAuthState(auth)
+    
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const imageStorageKey = 'a2cd64019cccf28bed5435da894d04f9'
 
