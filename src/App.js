@@ -19,6 +19,11 @@ import PurchasePage from './Pages/PurchasePage/PurchasePage';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import AddParts from './Pages/Dashboard/AddParts';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
+import ManageParts from './Pages/Dashboard/ManageParts';
+ 
  
 
 function App() {
@@ -36,6 +41,10 @@ function App() {
           <Route index element={<MyOrders/>} />
           <Route path="review" element={<AddReview/>} />
           <Route path="profile" element={<MyProfile/>} />
+          <Route path="add" element={<AddParts/>} />
+          <Route path="make" element={<MakeAdmin/>} />
+          <Route path="orders" element={<ManageOrders/>} />
+          <Route path="parts" element={<ManageParts/>} />
 
         </Route>
 

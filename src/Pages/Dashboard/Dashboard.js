@@ -24,8 +24,18 @@ const Dashboard = () => {
 
 
                     <li className='mb-3 uppercase font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard">My Orders</Link></li>
+
                     <li className='mb-3 uppercase font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/review">Add Review</Link></li>
+
                     <li className='mb-3 uppercase font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/profile">My Profile</Link></li>
+
+                    <li className='mb-3 uppercase font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/add">Add Parts</Link></li>
+
+                    <li className='mb-3 uppercase font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/make">Make Admin</Link></li>
+
+                    <li className='mb-3 uppercase font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/orders">Manage Orders</Link></li>
+
+                    <li className='mb-3 uppercase font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/parts">Manage Parts</Link></li>
 
                 </ul>
 
