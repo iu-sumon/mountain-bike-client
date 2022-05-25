@@ -7,6 +7,7 @@ import faceBook from '../../Assets/svg/facebook-svgrepo-com.svg'
 import { useForm } from "react-hook-form";
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
+import useToken from '../../hooks/useToken';
 const Login = () => {
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -20,12 +21,13 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [token] = useToken(user || gUser ||fUser)
     let signInError;
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    if (user || gUser || fUser) {
+    if (token) {
         navigate(from, { replace: true });
     }
 

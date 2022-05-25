@@ -1,33 +1,49 @@
+
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import DeletingModal from './DeletingModal';
 
 const MyOrders = () => {
 
     const [orders, setOrders] = useState([]);
-
-
+    const navigate = useNavigate();
     const [user] = useAuthState(auth);
 
 
     useEffect(() => {
 
         if (user) {
-            fetch(`http://localhost:5000/order?email=${user.email}`)
-                .then(res => res.json())
+            fetch(`http://localhost:5000/order?email=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res => {
+                     // if (res.status === 401 || res.status === 403) {
+                    //     signOut(auth);
+                    //     localStorage.removeItem('accessToken');
+                    //     navigate('/');
+                    // }
+                    return res.json()
+                })
+
+
+
                 .then(data => {
                     setOrders(data)
 
                 });
         }
-    }, [user])
+    }, [navigate, user])
 
 
     return (
         <div>
             <div className='bg-[#677E81] py-10 h-screen px-10'>
-                <h2 className='text-center mb-5 text-white text-3xl'>My Orders: {orders.length}</h2>
+                <h2 className='text-center mb-5 text-white text-3xl uppercase font-semibold'>My Orders: {orders.length}</h2>
 
                 <div className="overflow-x-auto">
 

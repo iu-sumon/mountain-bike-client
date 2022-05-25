@@ -8,18 +8,19 @@ import Loading from '../Shared/Loading/Loading';
 import google from '../../Assets/svg/google-icon-logo-svgrepo-com.svg'
 import faceBook from '../../Assets/svg/facebook-svgrepo-com.svg'
 import { toast } from 'react-toastify';
+import useToken from '../../hooks/useToken';
 const SignUp = () => {
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [signInWithFacebook, fUser, fLoading, fError] = useSignInWithFacebook(auth);
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit,reset } = useForm();
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
-
+    const [token] = useToken(user || gUser ||fUser)
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate();
 
@@ -33,15 +34,17 @@ const SignUp = () => {
         signInError = <small className='text-red-500'>{error?.message || gError?.message || updateError?.message}</small>
     }
 
-    if (user || gUser || fUser) {
-        navigate('/');
+    if (token) {
+       navigate('/')
     }
+
 
     const onSubmit = async data => {
 
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
         toast('Signup Successfully')
+        reset()
     }
     return (
         <div  className='bg-cover h-screen' style={{ backgroundImage: `url(${bg})` }}>

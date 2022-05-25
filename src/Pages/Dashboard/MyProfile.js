@@ -1,46 +1,78 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
+
+
+
 const MyProfile = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const [user] = useAuthState(auth)
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
+    const imageStorageKey = '7bcaf5b178582ea0a1308db59afec8a0'
+
 
     const onSubmit = async (data) => {
 
+        const image = data.image[0];
+        const formData = new FormData();
+        formData.append('image', image);
 
-        const profile =
-        {
+        const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
 
-            name: data.name,
-            email: data.email,
-            education: data.education,
-            city: data.city,
-            phone: data.number,
-            linkedin: data.linkedin
-
-
-
-        }
-
-        fetch(' http://localhost:5000/profiles', {
-
+        fetch(url, {
             method: 'POST',
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: JSON.stringify(profile),
+            body: formData
         })
-            .then((response) => response.json())
-            .then((data) => {
-                toast.success('Profile added successfully')
-            });
+            .then(res => res.json())
+            .then(result => {
+
+
+
+                if (result.success) {
+
+                    const img = result.data.url;
+
+                    const profile =
+                    {
+
+                        name: data.name,
+                        email: data.email,
+                        education: data.education,
+                        city: data.city,
+                        phone: data.number,
+                        linkedin: data.linkedin,
+                        image: img
+
+                    }
+
+                    const url = `http://localhost:5000/profile?email=${user?.email}`;
+                    fetch(url, {
+
+                        method: 'PUT',
+                        headers: {
+                            'Content-type': 'application/json',
+                        },
+                        body: JSON.stringify(profile),
+                    })
+                        .then((res) => {
+                            res.json()
+                        })
+                        .then(data => {
+                            toast.success('Profile update successfully')
+                            reset();
+                        })
+
+                }
+            })
 
 
     };
 
     return (
         <div className='bg-[#677E81] py-10 h-screen'>
-            <h1 className='text-2xl text-center text-warning mb-3 uppercase'>Please add your profile</h1>
-            <div className='w-[30%] mx-auto card shadow-2xl border md:p-10 p-3'>
+            <h1 className='text-2xl text-center text-white mb-3 uppercase'>Please update your profile</h1>
+            <div className='w-[40%]  mx-auto card shadow-2xl border md:p-10 p-3'>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <div className="form-control">
@@ -177,10 +209,36 @@ const MyProfile = () => {
                         </label>
 
                     </div>
+                    <div className="form-control ">
+                        
+                        <label class="block">
+                            <span class="sr-only">Choose profile photo</span>
+                            <input
+                                {...register("image", {
+                                    required: {
+                                        value: true,
+                                        message: 'Image is Required'
+                                    },
 
+                                })}
+                                type="file"
+                                class="text-sm text-white text-bold 
+                                    file:mr-4 file:py-2 file:px-4
+                                    file:rounded-full file:border-0
+                                    file:text-sm file:font-semibold
+                                  file:bg-violet-50 file:text-violet-700
+                                  hover:file:bg-violet-100"/>
+                        </label>
+                        
+                        <label className="label">
+                            {errors.image?.type === 'required' && <span className="label-text-alt text-warning">{errors.image?.message}</span>}
+
+                        </label>
+
+                    </div>
 
                     <div className='text-center'>
-                        <input type="Submit" value='add' className="btn text-white px-12 rounded-full" />
+                        <input type="Submit" value='Update profile' className="btn text-white px-12 rounded-full" />
                     </div>
                 </form>
             </div>

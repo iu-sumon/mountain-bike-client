@@ -19,7 +19,7 @@ import PurchasePage from './Pages/PurchasePage/PurchasePage';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
-import DeletingModal from './Pages/Dashboard/DeletingModal';
+ 
 
 function App() {
   return (
