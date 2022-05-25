@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+ # Mountain Bicycle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my project live link [Mountain Bicycle](https://electronics-store-client.web.app/).
 
-## Available Scripts
+## Short Description
+This is a simple warehouse website. user can easy to handle it .and also manage it. This site has been implemented login and sign up page for user authentication. thats why this site is secure for valid user. Individual user can see his/her personal item .that was added he/she.This site implemented by using latest technologies .like react,firebase,mongodb,node.js,express etc.
 
-In the project directory, you can run:
+## Technologies
+***
+A list of technologies used within the project:
+* [React library](https://reactjs.org/): Version 18.0.0 
+* [React Firebase hooks](https://github.com/CSFrequency/react-firebase-hooks )
+* [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview): Version 6.0
+* [React BootStrap](https://react-bootstrap.github.io/getting-started/introduction/): Version 2.3.1
+* [React Toast](https://www.npmjs.com/package/react-toastify)
+* [Mongodb](https://www.mongodb.com/)
+* [Node.js](https://nodejs.org/en/)
+* [Express js](https://expressjs.com/)
+* [Firebase Authentication](https://firebase.google.com/?gclid=CjwKCAjw9e6SBhB2EiwA5myr9o1Uvgd818pxxFWpzUC7u0R0h8Ie6ryVOfSp_gtJM8_zohSlM4XI1BoCeQ8QAvD_BwE&gclsrc=aw.ds)
 
-### `npm start`
+ ## Features and Functionality
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* This is a Tech Den warehouse website.This site can provide many warehouse items . 
+* This is a simple warehouse website .User can update ,delete and mange  items in this site easily .
+* This site has been implemented login and sign up page .that,s why user can create new account and also login .
+* This site is secure ! that's why user can update items without information lost.
+* This site's  also design and develop for disability's man.
+* We provide best service for user .
+* User can add any item easily in this site and also who can see his item
+* User can delete any item easily in this site .
+* In addition to user can manage items easily .

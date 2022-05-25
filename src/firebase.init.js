@@ -2,12 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBTfiMb_LRMck_3tizojuPs1xP-2Pv6QFU",
-    authDomain: "mountain-bicycle.firebaseapp.com",
-    projectId: "mountain-bicycle",
-    storageBucket: "mountain-bicycle.appspot.com",
-    messagingSenderId: "193133848678",
-    appId: "1:193133848678:web:a6f1e92b7d73dcabdba5a7"
+
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
+
 };
 
 // Initialize Firebase

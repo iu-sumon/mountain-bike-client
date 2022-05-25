@@ -22,7 +22,7 @@ const MyOrders = () => {
                 }
             })
                 .then(res => {
-                     
+
                     return res.json()
                 })
 
@@ -39,7 +39,6 @@ const MyOrders = () => {
     return (
         <div>
             <div className='bg-[#677E81] py-10 h-screen px-10'>
-                <h2 className='text-center mb-5 text-white text-3xl uppercase font-semibold'>My Orders: {orders.length}</h2>
 
                 <div className="overflow-x-auto">
 

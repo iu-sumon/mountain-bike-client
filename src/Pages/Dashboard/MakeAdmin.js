@@ -20,10 +20,8 @@ const MakeAdmin = () => {
 
 
     return (
-        <div>
-            <h2 className="text-2xl text-center">All Users: {users.length}</h2>
-
-            <div class="overflow-x-auto">
+        <div className='bg-[#677E81] py-10 h-screen px-10'>
+             <div class="overflow-x-auto">
                 <table class="table w-full">
 
                     <thead>
