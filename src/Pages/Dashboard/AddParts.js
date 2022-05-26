@@ -1,12 +1,12 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
- ;
+;
 
 
 
 const AddParts = () => {
-    
+
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const imageStorageKey = 'a2cd64019cccf28bed5435da894d04f9'
 
@@ -45,7 +45,7 @@ const AddParts = () => {
 
                     }
 
-                    const url = `http://localhost:5000/parts`;
+                    const url = ` https://evening-temple-70912.herokuapp.com/parts`;
                     fetch(url, {
 
                         method: 'POST',

@@ -6,8 +6,8 @@ const useOrders = () => {
 
     useEffect(() => {
 
-        const url = 'http://localhost:5000/orders'
-        fetch(url,{
+        const url = ' https://evening-temple-70912.herokuapp.com/orders'
+        fetch(url, {
             method: 'GET',
 
             headers: {

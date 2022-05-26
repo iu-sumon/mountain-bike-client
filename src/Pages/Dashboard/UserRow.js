@@ -1,13 +1,13 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const UserRow = ({ user, refetch,index }) => {
+const UserRow = ({ user, refetch, index }) => {
 
     const { email, role } = user;
 
     const makeAdmin = () => {
 
-        fetch(` http://localhost:5000/user/admin/${email}`, {
+        fetch(`  https://evening-temple-70912.herokuapp.com/user/admin/${email}`, {
 
             method: 'PUT',
             headers: {
@@ -38,7 +38,7 @@ const UserRow = ({ user, refetch,index }) => {
     return (
 
         <tr>
-            <th>{index+1}</th>
+            <th>{index + 1}</th>
 
             <td>{email}</td>
             {/* je sob user a role:admin thakbe na tader button dekhabe  */}

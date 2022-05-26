@@ -46,7 +46,7 @@ const MyProfile = () => {
 
                     }
 
-                    const url = `http://localhost:5000/profile?email=${data.email}`;
+                    const url = ` https://evening-temple-70912.herokuapp.com/profile?email=${data.email}`;
                     fetch(url, {
 
                         method: 'PUT',
@@ -56,7 +56,7 @@ const MyProfile = () => {
                         body: JSON.stringify(profile),
                     })
                         .then((res) => {
-                           return res.json()
+                            return res.json()
                         })
                         .then(data => {
                             toast.success('Profile update successfully')
@@ -214,7 +214,7 @@ const MyProfile = () => {
 
                     </div>
                     <div className="form-control ">
-                        
+
                         <label class="block">
                             <span class="sr-only">Choose profile photo</span>
                             <input
@@ -233,7 +233,7 @@ const MyProfile = () => {
                                   file:bg-violet-50 file:text-violet-700
                                   hover:file:bg-violet-100"/>
                         </label>
-                        
+
                         <label className="label">
                             {errors.image?.type === 'required' && <span className="label-text-alt text-warning">{errors.image?.message}</span>}
 

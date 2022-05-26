@@ -1,13 +1,13 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useReviews = () => {
 
-     const [ reviews,setReviews]=useState([])
+    const [reviews, setReviews] = useState([])
 
     useEffect(() => {
 
-        const url = 'http://localhost:5000/reviews'
-        fetch(url,{
+        const url = ' https://evening-temple-70912.herokuapp.com/reviews'
+        fetch(url, {
             method: 'GET',
 
             headers: {
@@ -21,7 +21,7 @@ const useReviews = () => {
             })
     }, [])
 
-    return [ reviews,setReviews]
+    return [reviews, setReviews]
 };
 
 export default useReviews;

@@ -13,9 +13,9 @@ const stripePromise = loadStripe('pk_test_51L3cIjAExOLQK2IMSGNUgjrGJNIOPc3ZWlNCx
 
 const Payment = () => {
     const { id } = useParams();
-    const[user]=useAuthState(auth)
+    const [user] = useAuthState(auth)
 
-    const url = `http://localhost:5000/order/${id}`;
+    const url = ` https://evening-temple-70912.herokuapp.com/order/${id}`;
 
     const { data: order, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',
@@ -28,27 +28,27 @@ const Payment = () => {
         return <Loading></Loading>
     }
 
-return (
-      <div className='bg-[#677E81] py-10 h-screen px-10'>
+    return (
+        <div className='bg-[#677E81] py-10 h-screen px-10'>
             <div>
-           <div class="card w-50 max-w-md mx-auto bg-base-100 shadow-xl my-12">
-                <div class="card-body">
-                    <p className="text-success font-bold text-center text-2xl">Hello, {user?.displayName}</p>
-                    <div className='flex  justify-center items-center'>
-                    <p class="text-xl text-center">Please Pay for</p>
-                     <p className='text-center font-bold'>${order.price}</p>
+                <div class="card w-50 max-w-md mx-auto bg-base-100 shadow-xl my-12">
+                    <div class="card-body">
+                        <p className="text-success font-bold text-center text-2xl">Hello, {user?.displayName}</p>
+                        <div className='flex  justify-center items-center'>
+                            <p class="text-xl text-center">Please Pay for</p>
+                            <p className='text-center font-bold'>${order.price}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card flex-shrink-0 w-50 mx-auto max-w-md shadow-2xl bg-base-100">
+                    <div class="card-body">
+                        <Elements stripe={stripePromise}>
+                            <CheckoutFrom order={order} />
+                        </Elements>
                     </div>
                 </div>
             </div>
-            <div class="card flex-shrink-0 w-50 mx-auto max-w-md shadow-2xl bg-base-100">
-                <div class="card-body">
-                <Elements stripe={stripePromise}>
-                        <CheckoutFrom order={order} />
-                    </Elements>
-                </div>
-            </div>
         </div>
-      </div>
     );
 };
 

@@ -28,7 +28,7 @@ const PurchasePage = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/purchasePage/${id}`)
+        fetch(` https://evening-temple-70912.herokuapp.com/purchasePage/${id}`)
 
             .then(res => res.json())
             .then(data => setPart(data))
@@ -53,7 +53,7 @@ const PurchasePage = () => {
 
 
 
-        fetch(' http://localhost:5000/order', {
+        fetch('  https://evening-temple-70912.herokuapp.com/order', {
 
             method: 'POST',
             headers: {
@@ -83,11 +83,11 @@ const PurchasePage = () => {
                             <p className='text-justify'>{part?.description?.slice(0, 300)}</p>
                             <p><span className='text-4xl'>${part.price}</span> (Per parts price)</p>
                             <div class="rating">
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <div className='flex justify-between items-center text-[18px] font-bold'>
                                 <small>Ordered Quantity</small>
@@ -156,7 +156,7 @@ const PurchasePage = () => {
                                 </label>
                             </div>
 
-                         
+
                             <div className="form-control">
 
 

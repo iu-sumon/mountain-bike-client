@@ -1,12 +1,12 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useParts = () => {
 
-     const [parts,setParts]=useState([])
+    const [parts, setParts] = useState([])
 
     useEffect(() => {
 
-        const url = 'http://localhost:5000/parts'
+        const url = ' https://evening-temple-70912.herokuapp.com/parts'
         fetch(url,)
             .then(res => res.json())
             .then(data => {
@@ -14,7 +14,7 @@ const useParts = () => {
             })
     }, [])
 
-    return [parts,setParts]
+    return [parts, setParts]
 };
 
 export default useParts;

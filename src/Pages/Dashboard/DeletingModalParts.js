@@ -9,7 +9,7 @@ const DeletingModalParts = ({ parts, setParts }) => {
 
     const handleDeletePart = id => {
 
-        const url = `http://localhost:5000/part/${id}`;
+        const url = ` https://evening-temple-70912.herokuapp.com/part/${id}`;
         fetch(url, {
             headers: {
                 'content-type': 'application/json',
