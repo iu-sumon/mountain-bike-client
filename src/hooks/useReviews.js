@@ -7,7 +7,14 @@ const useReviews = () => {
     useEffect(() => {
 
         const url = 'http://localhost:5000/reviews'
-        fetch(url)
+        fetch(url,{
+            method: 'GET',
+
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => {
                 setReviews(data)

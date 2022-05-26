@@ -20,7 +20,8 @@ const MakeAdmin = () => {
 
 
     return (
-        <div className='bg-[#677E81] py-10 h-screen px-10'>
+        <div className='bg-[#677E81] py-5 h-screen px-10'>
+              <h1 className='text-2xl text-center font-semibold text-white uppercase mb-3'>Please make an admin</h1>
              <div class="overflow-x-auto">
                 <table class="table w-full">
 

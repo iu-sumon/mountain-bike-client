@@ -39,7 +39,7 @@ const MyOrders = () => {
     return (
         <div>
             <div className='bg-[#677E81] py-10 h-screen px-10'>
-
+                 <h1 className='text-2xl text-center font-semibold text-white uppercase mb-3'>My Orders</h1>
                 <div className="overflow-x-auto">
 
                     <table className="table w-full ">

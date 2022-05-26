@@ -23,8 +23,10 @@ import AddParts from './Pages/Dashboard/AddParts';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import ManageOrders from './Pages/Dashboard/ManageOrders';
 import ManageParts from './Pages/Dashboard/ManageParts';
- 
- 
+import RequireAuth from './Pages/Login/RequireAuth';
+import RequireAdmin from './Pages/Login/RequireAdmin';
+
+
 
 function App() {
   return (
@@ -33,18 +35,44 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/all-parts" element={<AllParts />} />
+
         <Route path="/dashboard" element={
 
-          <Dashboard />
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>
 
         }>
-          <Route index element={<MyOrders/>} />
-          <Route path="review" element={<AddReview/>} />
-          <Route path="profile" element={<MyProfile/>} />
-          <Route path="add" element={<AddParts/>} />
-          <Route path="make" element={<MakeAdmin/>} />
-          <Route path="orders" element={<ManageOrders/>} />
-          <Route path="parts" element={<ManageParts/>} />
+          <Route index element={<MyProfile />} />
+          <Route path="review" element={<AddReview />} />
+          <Route path="myOrders" element={<MyOrders />} />
+          <Route path="add" element={
+
+            <RequireAdmin>
+              <AddParts />
+            </RequireAdmin>
+
+          } />
+          <Route path="make" element={
+
+            <RequireAdmin>
+              <MakeAdmin />
+            </RequireAdmin>
+
+          } />
+          <Route path="orders" element={
+
+            <RequireAdmin>
+              <ManageOrders />
+            </RequireAdmin>
+
+          } />
+          <Route path="parts" element={
+
+            <RequireAdmin>
+              <ManageParts />
+            </RequireAdmin>
+          } />
 
         </Route>
 
@@ -54,8 +82,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-       
-        <Route path="/purchasePage/:id" element={<PurchasePage />} />
+
+        <Route path="/purchasePage/:id" element={
+
+          <RequireAuth>
+            <PurchasePage />
+          </RequireAuth>
+
+        } />
 
 
         <Route path="/*" element={<NotFound />} />

@@ -50,7 +50,8 @@ const AddParts = () => {
 
                         method: 'POST',
                         headers: {
-                            'Content-type': 'application/json',
+                            'content-type': 'application/json',
+                            authorization: `Bearer ${localStorage.getItem('accessToken')}`
                         },
                         body: JSON.stringify(parts),
                     })

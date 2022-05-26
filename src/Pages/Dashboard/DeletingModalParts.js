@@ -11,7 +11,10 @@ const DeletingModalParts = ({ parts, setParts }) => {
 
         const url = `http://localhost:5000/part/${id}`;
         fetch(url, {
-            method: 'DELETE'
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            },
         })
             .then(res => res.json())
             .then(data => {

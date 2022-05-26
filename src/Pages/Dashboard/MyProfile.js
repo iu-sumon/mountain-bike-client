@@ -46,7 +46,7 @@ const MyProfile = () => {
 
                     }
 
-                    const url = `http://localhost:5000/profile?email=${user?.email}`;
+                    const url = `http://localhost:5000/profile?email=${data.email}`;
                     fetch(url, {
 
                         method: 'PUT',
@@ -56,7 +56,7 @@ const MyProfile = () => {
                         body: JSON.stringify(profile),
                     })
                         .then((res) => {
-                            res.json()
+                           return res.json()
                         })
                         .then(data => {
                             toast.success('Profile update successfully')
@@ -87,6 +87,8 @@ const MyProfile = () => {
                             })}
                             type="name"
                             placeholder="Enter your name"
+                            value={user?.displayName}
+                            readOnly
                             className="input input-bordered" />
 
                         <label className="label">
@@ -111,6 +113,8 @@ const MyProfile = () => {
                             })}
                             type="email"
                             placeholder="Enter your email"
+                            value={user?.email}
+                            readOnly
                             className="input input-bordered" />
 
                         <label className="label">

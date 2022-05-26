@@ -7,7 +7,7 @@ const useParts = () => {
     useEffect(() => {
 
         const url = 'http://localhost:5000/parts'
-        fetch(url)
+        fetch(url,)
             .then(res => res.json())
             .then(data => {
                 setParts(data)
