@@ -15,7 +15,7 @@ const Payment = () => {
     const { id } = useParams();
     const [user] = useAuthState(auth)
 
-    const url = ` https://evening-temple-70912.herokuapp.com/order/${id}`;
+    const url = `   https://evening-temple-70912.herokuapp.com/order/${id}`;
 
     const { data: order, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',

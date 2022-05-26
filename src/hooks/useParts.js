@@ -6,7 +6,7 @@ const useParts = () => {
 
     useEffect(() => {
 
-        const url = ' https://evening-temple-70912.herokuapp.com/parts'
+        const url = '   https://evening-temple-70912.herokuapp.com/parts'
         fetch(url,)
             .then(res => res.json())
             .then(data => {

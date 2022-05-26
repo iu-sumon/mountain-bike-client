@@ -12,7 +12,7 @@ const useToken = user => {
 
         if (email) {
 
-            fetch(` https://evening-temple-70912.herokuapp.com/user/${email}`, {
+            fetch(`   https://evening-temple-70912.herokuapp.com/user/${email}`, {
 
                 method: 'PUT',
                 headers: {

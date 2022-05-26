@@ -6,7 +6,7 @@ import UserRow from './UserRow';
 
 const MakeAdmin = () => {
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(' https://evening-temple-70912.herokuapp.com/users', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('   https://evening-temple-70912.herokuapp.com/users', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

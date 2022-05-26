@@ -36,9 +36,21 @@ const Portfolio = () => {
                             </div>
                             <div className='my-5'>
                                 <h5 className='font-semibold underline text-black'>Projects</h5>
-                                <p><span className='font-semibold'>Warehouse-management: </span><span className='link'>https://electronics-store-client.web.app/</span> </p>
-                                <p><span className='font-semibold'>Independent-service-provider: </span><span className='link'>https://my-doctor-8532c.web.app/</span> </p>
-                                <p><span className='font-semibold'>Lucky-one: </span><span className='link'>https://cosmic-phoenix-a7ebc5.netlify.app/</span> </p>
+                                <p>
+                                    <span className='font-semibold'>Warehouse-management: </span>
+                                    <a href="https://electronics-store-client.web.app/">Live Link</a>
+
+                                </p>
+                                <p>
+                                    <span className='font-semibold'>Independent-service-provider:</span>
+
+                                    <a href="https://my-doctor-8532c.web.app/">Live Link</a>
+
+                                </p>
+                                <p>
+                                    <span className='font-semibold'>Lucky-one: </span>
+                                    <a href="https://cosmic-phoenix-a7ebc5.netlify.app/">Live Link</a>
+                                </p>
 
                             </div>
                         </div>

@@ -37,7 +37,7 @@ const AddReview = () => {
                         toast('Please provide rating between 1 to 5')
                         return;
                     }
-                    fetch('  https://evening-temple-70912.herokuapp.com/reviews', {
+                    fetch('    https://evening-temple-70912.herokuapp.com/reviews', {
 
                         method: 'POST',
                         headers: {

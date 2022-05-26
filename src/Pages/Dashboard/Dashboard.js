@@ -6,7 +6,7 @@ import useAdmin from '../../hooks/useAdmin';
 
 const Dashboard = () => {
 
-    const[user]=useAuthState(auth)
+    const [user] = useAuthState(auth)
     const [admin] = useAdmin(user)
 
     return (
@@ -23,8 +23,10 @@ const Dashboard = () => {
 
 
                     <li className='mb-3 font-bold btn  btn-primary rounded-full text-center'><Link to="/dashboard">My Profile</Link></li>
-                    <li className='mb-3 font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/myOrders">My Orders</Link></li>
-                    <li className='mb-3  font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/review">Add Review</Link></li>
+                    {!admin && <>
+                        <li className='mb-3 font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/myOrders">My Orders</Link></li>
+                        <li className='mb-3  font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/review">Add Review</Link></li>
+                    </>}
                     {admin && <>
                         <li className='mb-3  font-bold btn btn-primary rounded-full text-center'><Link to="/dashboard/add">Add Parts</Link></li>
 

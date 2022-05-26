@@ -56,15 +56,13 @@ const Blogs = () => {
 
                 <div className='border-2 px-5 pb-3 mb-5 shadow rounded-lg'>
                     <p className='text-xl font-semibold text-black'>You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus nam quasi modi dolorem et omnis. Pariatur, ratione laudantium enim sequi aperiam dolorum odio, sunt voluptatum, doloremque quae eligendi hic eius commodi. Expedita nam dolorum alias voluptatem voluptate quis sint vero enim veritatis ratione, labore cupiditate facilis qui ea totam nesciunt ipsa quam doloribus deleniti! Distinctio aut ex inventore sed excepturi totam a sapiente dignissimos, culpa nostrum molestias rerum quis tempora ipsum voluptatibus tenetur quo ullam hic saepe laborum, eos blanditiis, animi facilis delectus? Rem earum laudantium deleniti tempore tempora natus aspernatur quam atque accusamus laborum. Ullam natus sunt ut dolore!</p>
+                    <p>We can use find, to get the specific name product. As example,
+                        const products = [x,y,z]; Here ,x,y,z are object
+                        where every object of the array contains a name. We can create a function to find product by its name.
+                        if (product.name==='searched name') matched, then this function will return the product.</p>
 
                 </div>
 
-                <div className='border-2 px-5 pb-3 mb-5 shadow rounded-lg'>
-                    <p className='text-xl font-semibold text-black'>Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus nam quasi modi dolorem et omnis. Pariatur, ratione laudantium enim sequi aperiam dolorum odio, sunt voluptatum, doloremque quae eligendi hic eius commodi. Expedita nam dolorum alias voluptatem voluptate quis sint vero enim veritatis ratione, labore cupiditate facilis qui ea totam nesciunt ipsa quam doloribus deleniti! Distinctio aut ex inventore sed excepturi totam a sapiente dignissimos, culpa nostrum molestias rerum quis tempora ipsum voluptatibus tenetur quo ullam hic saepe laborum, eos blanditiis, animi facilis delectus? Rem earum laudantium deleniti tempore tempora natus aspernatur quam atque accusamus laborum. Ullam natus sunt ut dolore!</p>
-
-                </div>
 
             </div>
         </div>

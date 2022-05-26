@@ -1,4 +1,3 @@
-import React from 'react';
 import useOrders from '../../hooks/useOrders';
 import DeletingModal from './DeletingModal';
 
@@ -6,8 +5,7 @@ import DeletingModal from './DeletingModal';
 const ManageOrders = () => {
 
     const [orders, setOrders] = useOrders()
-
-
+     
     return (
         <div>
         <div className='bg-[#677E81] py-5  px-10'>

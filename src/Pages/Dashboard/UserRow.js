@@ -7,7 +7,7 @@ const UserRow = ({ user, refetch, index }) => {
 
     const makeAdmin = () => {
 
-        fetch(`  https://evening-temple-70912.herokuapp.com/user/admin/${email}`, {
+        fetch(`    https://evening-temple-70912.herokuapp.com/user/admin/${email}`, {
 
             method: 'PUT',
             headers: {

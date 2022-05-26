@@ -45,7 +45,7 @@ const AddParts = () => {
 
                     }
 
-                    const url = ` https://evening-temple-70912.herokuapp.com/parts`;
+                    const url = `   https://evening-temple-70912.herokuapp.com/parts`;
                     fetch(url, {
 
                         method: 'POST',

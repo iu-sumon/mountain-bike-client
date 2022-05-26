@@ -46,7 +46,7 @@ const MyProfile = () => {
 
                     }
 
-                    const url = ` https://evening-temple-70912.herokuapp.com/profile?email=${data.email}`;
+                    const url = `   https://evening-temple-70912.herokuapp.com/profile?email=${data.email}`;
                     fetch(url, {
 
                         method: 'PUT',

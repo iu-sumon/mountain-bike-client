@@ -19,7 +19,7 @@ const CheckoutForm = ({ order }) => {
 
     useEffect(() => {
 
-        fetch(" https://evening-temple-70912.herokuapp.com/create-payment-intent",
+        fetch("   https://evening-temple-70912.herokuapp.com/create-payment-intent",
             {
                 method: "POST",
                 headers: {
@@ -81,7 +81,7 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 transactionId: paymentIntent.id,
             };
-            fetch(` https://evening-temple-70912.herokuapp.com/order/${_id}`, {
+            fetch(`   https://evening-temple-70912.herokuapp.com/order/${_id}`, {
                 method: "PATCH",
                 headers: {
                     "content-type": "application/json",

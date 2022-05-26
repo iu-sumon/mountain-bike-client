@@ -16,7 +16,7 @@ const MyOrders = () => {
 
         if (user) {
 
-            fetch(` https://evening-temple-70912.herokuapp.com/order?email=${user.email}`, {
+            fetch(`   https://evening-temple-70912.herokuapp.com/order?email=${user.email}`, {
 
                 method: 'GET',
                 headers: {
@@ -57,6 +57,7 @@ const MyOrders = () => {
                                 <th>Quantity</th>
                                 <th>Price</th>
                                 <th>Payment</th>
+                                <th>Status</th>
                                 <th>Action</th>
 
                             </tr>
@@ -76,14 +77,19 @@ const MyOrders = () => {
                                     <td>{order.price}</td>
                                     <td>
 
-                                        {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
-                                        {(order.price && order.paid) && <span>Payed</span>}
+                                        {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-warning'>Pay</button></Link>}
+                                        {(order.price && order.paid) && <button className='btn btn-xs btn-success'>Payed</button>}
 
 
 
                                     </td>
                                     <td>
-                                        <label for="my-modal-6" className="btn btn-xs btn-warning">Cancel</label>
+                                        {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-warning'>Pending</button></Link>}
+                                        {(order.price && order.paid) && <button className='btn btn-xs btn-success'>Shipping</button>}
+
+                                    </td>
+                                    <td>
+                                        <label for="my-modal-6" className="btn btn-xs btn-error">Cancel</label>
                                     </td>
 
 

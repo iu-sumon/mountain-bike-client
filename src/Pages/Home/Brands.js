@@ -8,7 +8,7 @@ const Brands = () => {
 
     useEffect(() => {
 
-        fetch(' https://evening-temple-70912.herokuapp.com/brands')
+        fetch('   https://evening-temple-70912.herokuapp.com/brands')
             .then(res => res.json())
             .then(data => setBrands(data))
 

@@ -6,7 +6,7 @@ const useReviews = () => {
 
     useEffect(() => {
 
-        const url = ' https://evening-temple-70912.herokuapp.com/reviews'
+        const url = '   https://evening-temple-70912.herokuapp.com/reviews'
         fetch(url, {
             method: 'GET',
 

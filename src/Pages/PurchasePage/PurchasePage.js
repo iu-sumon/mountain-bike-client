@@ -28,7 +28,7 @@ const PurchasePage = () => {
 
     useEffect(() => {
 
-        fetch(` https://evening-temple-70912.herokuapp.com/purchasePage/${id}`)
+        fetch(`   https://evening-temple-70912.herokuapp.com/purchasePage/${id}`)
 
             .then(res => res.json())
             .then(data => setPart(data))
@@ -53,7 +53,7 @@ const PurchasePage = () => {
 
 
 
-        fetch('  https://evening-temple-70912.herokuapp.com/order', {
+        fetch('    https://evening-temple-70912.herokuapp.com/order', {
 
             method: 'POST',
             headers: {
