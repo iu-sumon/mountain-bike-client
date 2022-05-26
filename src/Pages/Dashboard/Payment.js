@@ -8,7 +8,7 @@ import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 import CheckoutFrom from './CheckoutFrom';
 
-const stripePromise = loadStripe('pk_test_51L3cIjAExOLQK2IMSGNUgjrGJNIOPc3ZWlNCxj4OtPf9JrJpLw2SMOqrx3Vg34eso8pgcIkYH12DUhDQosg5Iz0f00ZoF4XJ9b');
+const stripePromise = loadStripe('pk_test_51L3cIjAExOLQK2IMSGNUgjrGJNIOPc3ZWlNCxj4OtPf9JrJpLw2SMOqrx3Vg34eso8pgcIkYH12DUhDQosg5Iz0f00ZoF4XJ9b')
 
 
 const Payment = () => {
@@ -43,7 +43,7 @@ return (
             <div class="card flex-shrink-0 w-50 mx-auto max-w-md shadow-2xl bg-base-100">
                 <div class="card-body">
                 <Elements stripe={stripePromise}>
-                        <CheckoutFrom />
+                        <CheckoutFrom order={order} />
                     </Elements>
                 </div>
             </div>
