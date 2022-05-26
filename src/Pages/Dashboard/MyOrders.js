@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import DeletingModal from './DeletingModal';
 
@@ -39,7 +39,7 @@ const MyOrders = () => {
     return (
         <div>
             <div className='bg-[#677E81] py-10 h-screen px-10'>
-                 <h1 className='text-2xl text-center font-semibold text-white uppercase mb-3'>My Orders</h1>
+                <h1 className='text-2xl text-center font-semibold text-white uppercase mb-3'>My Orders</h1>
                 <div className="overflow-x-auto">
 
                     <table className="table w-full ">
@@ -71,7 +71,14 @@ const MyOrders = () => {
                                     <td>{order.city}</td>
                                     <td>{order.quantity}</td>
                                     <td>{order.price}</td>
-                                    <td><button className="btn btn-xs">Payment</button></td>
+                                    <td>
+
+                                        {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
+                                        {(order.price && order.paid) && <span>Payed</span>}
+
+
+
+                                    </td>
                                     <td>
                                         <label for="my-modal-6" className="btn btn-xs btn-warning">Cancel</label>
                                     </td>

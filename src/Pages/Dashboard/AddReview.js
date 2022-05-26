@@ -20,8 +20,11 @@ const AddReview = () => {
         })
             .then(res => res.json())
             .then(result => {
+
                 if (result.success) {
+
                     const img = result.data.url;
+
                     const review =
                     {
 
@@ -30,7 +33,10 @@ const AddReview = () => {
                         img: img,
                         ratings: data.ratings
                     }
-
+                    if (data.ratings > 5 || data.ratings < 1) {
+                        toast('Please provide rating between 1 to 5')
+                        return;
+                    }
                     fetch(' http://localhost:5000/reviews', {
 
                         method: 'POST',
@@ -66,9 +72,9 @@ const AddReview = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <div className="form-control">
-                    <label className="label">
-                        <span className="label-text text-white font-semibold">Name</span>
-                    </label>
+                        <label className="label">
+                            <span className="label-text text-white font-semibold">Name</span>
+                        </label>
                         <input
                             {...register("name", {
                                 required: {
@@ -88,9 +94,9 @@ const AddReview = () => {
 
                     </div>
                     <div className="form-control">
-                    <label className="label">
-                        <span className="label-text text-white font-semibold">Review</span>
-                    </label>
+                        <label className="label">
+                            <span className="label-text text-white font-semibold">Review</span>
+                        </label>
 
                         <textarea
                             {...register("review", {
@@ -112,9 +118,9 @@ const AddReview = () => {
                     </div>
                     <div className="form-control">
 
-                    <label className="label">
-                        <span className="label-text text-white font-semibold">Ratings</span>
-                    </label>
+                        <label className="label">
+                            <span className="label-text text-white font-semibold">Ratings</span>
+                        </label>
 
                         <input
                             {...register("ratings", {
@@ -136,7 +142,7 @@ const AddReview = () => {
                     </div>
 
                     <div className="form-control ">
-                        
+
                         <label class="block">
                             <span class="sr-only">Choose profile photo</span>
                             <input
@@ -155,7 +161,7 @@ const AddReview = () => {
                                   file:bg-violet-50 file:text-violet-700
                                   hover:file:bg-violet-100"/>
                         </label>
-                        
+
                         <label className="label">
                             {errors.image?.type === 'required' && <span className="label-text-alt text-warning">{errors.image?.message}</span>}
 

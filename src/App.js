@@ -25,6 +25,7 @@ import ManageOrders from './Pages/Dashboard/ManageOrders';
 import ManageParts from './Pages/Dashboard/ManageParts';
 import RequireAuth from './Pages/Login/RequireAuth';
 import RequireAdmin from './Pages/Login/RequireAdmin';
+import Payment from './Pages/Dashboard/Payment';
 
 
 
@@ -46,6 +47,7 @@ function App() {
           <Route index element={<MyProfile />} />
           <Route path="review" element={<AddReview />} />
           <Route path="myOrders" element={<MyOrders />} />
+          <Route path="payment/:id" element={<Payment/>} />
           <Route path="add" element={
 
             <RequireAdmin>
